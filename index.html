@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-           img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
+       img {
+      height: 100vh;         /* prend toute la hauteur de l’écran */
+      width: auto;           /* conserve le ratio */
+      display: block;
+      margin: 0 auto;        /* centre l’image si elle est plus petite que l’écran en largeur */
+      object-fit: cover;     /* optionnel : coupe l’image pour remplir sans déformer */
+    }
         @media (max-width: 768px) {
             body{
                 padding: 400px;
