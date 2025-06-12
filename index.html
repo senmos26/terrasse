@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-            img {
-      height: 100vh;         /* prend toute la hauteur de l’écran */
-      width: auto;           /* conserve le ratio */
-      display: block;
-      margin: 0 auto;        /* centre l’image si elle est plus petite que l’écran en largeur */
-      object-fit: cover;     /* optionnel : coupe l’image pour remplir sans déformer */
+             html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
-        @media (max-width: 768px) {
-      img {
+
+    .image-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* 📱 Sur mobile : hauteur automatique pour ne pas forcer */
+    @media (max-width: 768px) {
+      .image-container {
         height: auto;
-        object-fit: contain;
+        padding: 1rem;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
       }
     }
     </style>
