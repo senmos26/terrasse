@@ -6,10 +6,11 @@
     <title>Document</title>
     <style>
             img {
-      max-width: 100%;
-      height: auto;
+      height: 100vh;         /* prend toute la hauteur de l’écran */
+      width: auto;           /* conserve le ratio */
       display: block;
-      margin: 0 auto; /* centre l'image horizontalement */
+      margin: 0 auto;        /* centre l’image si elle est plus petite que l’écran en largeur */
+      object-fit: cover;     /* optionnel : coupe l’image pour remplir sans déformer */
     }
     </style>
 </head>
