@@ -12,6 +12,12 @@
       margin: 0 auto;        /* centre l’image si elle est plus petite que l’écran en largeur */
       object-fit: cover;     /* optionnel : coupe l’image pour remplir sans déformer */
     }
+        @media (max-width: 768px) {
+      img {
+        height: auto;
+        object-fit: contain;
+      }
+    }
     </style>
 </head>
 <body>
